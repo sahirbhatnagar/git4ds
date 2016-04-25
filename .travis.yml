@@ -3,7 +3,7 @@ language: r
 env:
   global:
     - R_PKG="$(basename $TRAVIS_REPO_SLUG)" R_KNITR_OPTIONS="knitr.chunk.tidy=TRUE" PATH=$HOME/bin:$PATH
-    - secure: "sVlZaWb0Xy3e+PqVquwNA+932mFub/qNoMjKDPP0+8xBLD1YN2crm3Jq2lvB1/MDoqReK2Fzyz50zyBC2FgFnwN/7hyNkws9HtMTHpEYOn29JOf+tPLONw2WzTT2YTzVpYL4Z+t4g6sAKAtH9Bs9ncslvLhGy1UeEQmUW/uDV3jFTwjJ8mIGKwThrSTINJQYmTeg8ZmiDMG5fujBnAp91f9yAXEoIAPFkzv/pqcytt3PQxmzcpuSYeFO1WKthp9kyGlnOI+mKdIOdTRFDQ0z21JPrWMGmTaD4rZEzBrQiViNaQWZWLOM2BUN25nxWzRdmwiGpg98kYkxHY9WWwpyHjb7yn+8ysvqVqcE1KqdwZCLYLlI7l1SP7g8TeZQHlgPHzIHbi///bgAn02B4C7SmXeKPQkPBTAkbxdlwJygttZFw3exwuqGkmeHkd63rOzJTtphoWLHYICzVcGpYjKJT3mj7qZTioqjTRdzFnwzMT3i+JdaU9AyATl2L8079WM6D1tjIIP68QFDGMq6FpCksdw4jkp0C5IrThPopYawLCWBMGNdMyjh+XDLl9noDZaMR+URgbgYXBGSInCupp+3PqQGITPnVdk1PRdRBFtZ3YGjsccQ0eOOz1txrlSTTc1pRv0sxcIvAqpZ//cxvLsh9odtl9Nlf5tA/H3Ct/2lMRg="
+    - secure: "vuG0rF6O93djR+nMUOFjjQsgED/3ZKbS3xg7v+pk5EiWoNsi9Rz1oowgU8/BwqEl7YHLeA0oDTR+OGdpjjvxj0ZUCMDf0HNC/At74aTwltIsuXXXBN70RVve41BnwFkYUfCq4zs7C7t3sPUXU01faXaXD1PxdIYNoLCHUWXH9TO49VgtJQQHIg4JCRXiw4naefP0Y/gCGR1NH4h0CAQH1/P4Y6x4KJOFuurbV6fZI2sjIGGh1PXywZ9AGAjg4z+JCHROsLdbg5VobGOF8HDP4b8q/c+Bq4Xy1TWovu1L95neaWffTVFJ0XUSWomomCJOkhl9zqAUa+oSY7NNtubdIdoAQH9qpACaCHO4Zi7skz65O/xcNv+2ym2hAtfsTE+y0II8jU3tt4e6T6JIA9tR9Fop5BtjxvU0aud6qm2HjeH3VjV0yPAVm30iPBPbufboeO6JEwFZawrfsSRHvQK5evDXuBsElEBk+4/CW4XHrOJIOjqM5GNatnGEVvxEoy6wRVR7cTvQS7eNJfRDW7UGZZElAZKG1/dZn17aHJ0BPhBiiISt/eZ7/78y4NJysSJqNO69eXloUox1da3MLgapK0+eyDFYyxr5fdIA9SemWXt/1JJ4Ef5feygr6WESVDa2gBnK5FAEWU+CAmi7hB9h4ozZyaAxBbOa11Iu3DrhBPI="
 
 r_github_packages:
   - rstudio/bookdown
@@ -16,10 +16,6 @@ install:
 before_script:
   - chmod +x ./_build.sh
   - chmod +x ./_deploy.sh
-
-after_script:
-  - git config credential.helper "store --file=.git/credentials"
-  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 
 script:
   - ./_build.sh
