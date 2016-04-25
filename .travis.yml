@@ -17,11 +17,15 @@ before_script:
   - chmod +x ./_build.sh
   - chmod +x ./_deploy.sh
 
+after_script:
+  - git config credential.helper "store --file=.git/credentials"
+  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+
 script:
   - ./_build.sh
   - ./_deploy.sh
 
 cache:
   packages: yes
-  
+
   

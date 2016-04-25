@@ -1,6 +1,8 @@
 # configure your name and email if you have not done so
 git config --global user.email "sahir.bhatnagar@gmail.com"
 git config --global user.name "sahirbhatnagar"
+git config credential.helper "store --file=.git/credentials"
+echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 
 # clone the repository to the book-output directory
 git clone -b gh-pages \
