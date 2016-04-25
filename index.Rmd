@@ -1,28 +1,82 @@
 ---
-title: "Untitled"
-output: html_document
+title: 
+output:
+  html_document:
+    code_folding: hide
+    toc: true
+    toc_float: true
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE, tidy = TRUE, cache = FALSE, warning = FALSE, 
+               message = FALSE)
+knitr::opts_knit$set(eval.after = 'fig.cap')
 ```
 
-## R Markdown
+# Chapter 1: Installing Git and GitHub desktop {.tabset}
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+## Step 1 {#c1s1}
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+![](img/installgit/installgit1.png)
 
-```{r cars}
-summary(cars)
-```
+## Step 2
 
-## Including Plots
+go back to [Step1](#c1s1)
 
-You can also embed plots, for example:
+![](img/installgit/installgit2.png)
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+## Step 3
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot pp.
+![](img/installgit/installgit3.png)
+
+## Step 4
+
+![](img/installgit/installgit4.png)
+
+## Step 5
+
+![](img/installgit/installgit5.png)
+
+## Step 6
+
+![](img/installgit/installgit6.png)
+
+## Step 7
+
+![](img/installgit/installgit7.png)
+
+## Step 8
+
+![](img/installgit/installgit8.png)
+
+## Step 9
+
+![](img/installgit/installgit9.png)
+
+## Step 10
+
+![](img/installgit/installgit10.png)
+
+## Step 11
+
+![](img/installgit/installgit11.png)
+
+## Step 12
+
+![](img/installgit/installgit12.png)
+
+
+
+# Signup for a GitHub account, do their hello world tutorial
+
+# Version control R code using an example of PCA 
+
+# Create a branch, pull request, merge
+
+# Brief Intro to Rstudio Git functionality
+
+# Create an Rmarkdown document from the PCA code in step 3 on a gh-pages branch. See it get published automatically at username.github.io/repo_name
+
+# Create an online academic CV by publishing to gh-pages branch
+
+
