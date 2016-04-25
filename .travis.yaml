@@ -1,0 +1,25 @@
+language: r
+
+env:
+  global:
+    - R_PKG="$(basename $TRAVIS_REPO_SLUG)" R_KNITR_OPTIONS="knitr.chunk.tidy=TRUE" PATH=$HOME/bin:$PATH
+    - secure: "VZjaMtwthLBES2V4mwY7Ns8dHrv7UDvH21wMVUI42tNMcK94aPHErzX8orcr4vPZ3U20eCKkLZDYbdOrmn1SRWVFio+6yEcwG8n/UEg3G9U87sR6V2XkWGWcLDGXirMWIpy+bmVhp/2UC2Iea5mhup/K5XIOarqPvW+uJ2nL6oQ8ci8Y0k13zUX9Zg+motBA/nXFeKbwaMPGDHwzTo0AfH0HttdYuKiiQdoGPp9O9674td/ecygUprvkyXY7AU+ikglPe02uhboY4BJ4jBVuV8H0K3tEP1jGsFPov+0Tqe7MHxnJb+46U7BQWkgywhxe30DJtH8iiU8W8b/w2fBqE1TePXt/f8vQug6F8K3knj08REtDW07mC+ZR5WOgMHSFfK1FnBgHF+vDVDImjm7UyoMp3z6Io9ACoTAQ+s2r3W/tbVW4/+KFEyFuzJAFe8lrzSsSvfQjCuqW1zcJDpDnvEIvLmEUE2yCyh/Eg4LXCRTOpoEufw+YsMS9tjVU+GtqQqeKwL4ls+HgdUrWA+HuAdghXhYoGO8jkH+pg8vD5fIicUs2vGNtUtxt5beqq1iSDO+b5gmZhF2Lqx/zvs1r5UXEFTRLIjeuAK5EXH9VGHmcOjFklYtL1OR27wwd+P0o8Mb+fU52sUS9ZqYEY+LUa+EnhVuK+YHi+esi1BChuEs="
+
+r_github_packages:
+  - rstudio/bookdown
+
+install:
+  - Rscript -e "if (!require('ggplot2')) install.packages('ggplot2')"
+  - Rscript -e "if (!require('devtools')) install.packages('devtools')"
+
+
+before_script:
+  - chmod +x ./_build.sh
+  - chmod +x ./_deploy.sh
+
+script:
+  - ./_build.sh
+  - ./_deploy.sh
+
+cache:
+  packages: yes
