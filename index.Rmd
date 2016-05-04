@@ -1,5 +1,5 @@
 ---
-title: 
+title: GitHub for Data Scientists without the Terminal
 output:
   html_document:
     code_folding: hide
@@ -15,10 +15,33 @@ knitr::opts_knit$set(eval.after = 'fig.cap')
 
 # Introduction
 
-In this tutorial you will learn how to get started with version control using git and github.
+In this tutorial you will learn how to get started with version control using [git](https://git-scm.com/) and [GitHub](https://github.com/). The main goal here is to provide a step-by-step introduction to GitHub, with detailed screenshots, so that you become familiar with its main functionalities. 
+
+## Who
+
+This tutorial is intended for grad students and academics who use [`R`](https://cran.r-project.org/) but are unfamiliar with the _command line_ or _terminal_. I assume nothing about the computer science skills of the user. 
+
+## What
+
+The outline is provided in the floating table of contents.
+
+## Why
+
+Familiarity with GitHub has become an indispensible tool for anyone working with data. Sharing code, writing software for your statistical method, producing techincal reports and creating websites have become essential skills to have in the rapidly growing field of data science. 
+Other brief answers can be found [here](https://www.quora.com/Should-I-learn-Git-when-I-just-start-programming) and [here](http://stat545.com/git01_git-install.html#but-first-why).
+
 
 *************
 *************
+
+## Related Work
+
+There are several comprehensive online resources available for learning git and github for data science oriented people including:
+
+- [Stat 545 at UBC by Jenny Bryan](http://stat545.com/git00_index.html)
+- [Advanced R by Hadley Wickham](http://r-pkgs.had.co.nz/git.html)
+
+
 *************
 *************
 *************
@@ -26,6 +49,8 @@ In this tutorial you will learn how to get started with version control using gi
 # Chapter 1: Installing Git {.tabset}
 
 ## Step 1
+
+Git is to GitHub, what R is to RStudio. In other words Git is the software that does all the work behind the scenes, and GitHub a user interface that makes its easier to communicate with Git (and adds functionality as well). 
 
 ![](img/installgit/installgit1.png)
 
