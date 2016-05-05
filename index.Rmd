@@ -28,8 +28,11 @@ The outline is provided in the floating table of contents.
 ## Why
 
 Familiarity with GitHub has become an indispensible tool for anyone working with data. Sharing code, writing software for your statistical method, producing techincal reports and creating websites have become essential skills to have in the rapidly growing field of data science. 
-Other brief answers can be found [here](https://www.quora.com/Should-I-learn-Git-when-I-just-start-programming) and [here](http://stat545.com/git01_git-install.html#but-first-why).
+Other answers can be found [here](https://www.quora.com/Should-I-learn-Git-when-I-just-start-programming), [here](http://stackoverflow.com/questions/2658/getting-started-with-version-control) and [here](http://stat545.com/git01_git-install.html#but-first-why).
 
+## How
+
+Each of the topics covered are separated by chapters that should be followed sequentially. Within each chapter, there are a series of steps that you need to complete. Each step starts with some instructions followed by a screenshot. 
 
 *************
 *************
@@ -48,9 +51,15 @@ There are several comprehensive online resources available for learning git and 
 
 # Chapter 1: Installing Git {.tabset}
 
+_Note: the screenshots provided here are from a Windows operating system, however it will be similar on a Mac or Linux._
+
+*************
+
 ## Step 1
 
-Git is to GitHub, what R is to RStudio. In other words Git is the software that does all the work behind the scenes, and GitHub a user interface that makes its easier to communicate with Git (and adds functionality as well). 
+Git is to GitHub, what R is to RStudio. In other words Git is the software that does all the work behind the scenes, and GitHub a user interface that makes its easier to communicate with Git (and adds functionality as well). [Download Git](https://git-scm.com/downloads)
+
+*************
 
 ![](img/installgit/installgit1.png)
 
@@ -62,6 +71,10 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 ## Step 2
 
+Once the download has completed, click on the `Git-2.7.4 64-bit.exe` file (`.dmg` on a Mac, or `.deb` on Linux). _Note: the version you download might be different than what I've shown here, but that's ok_
+
+*************
+
 ![](img/installgit/installgit2.png)
 
 *************
@@ -71,6 +84,10 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 *************
 
 ## Step 3
+
+Once you have read the GNU General Public License (this is not required to continue) click on `Next`. 
+
+*************
 
 ![](img/installgit/installgit3.png)
 
@@ -82,6 +99,10 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 ## Step 4
 
+You need to select where you want Git installed. I have chosen the default location `Program Files`, but you can change this if you like by clicking on the `Browse...` button. Once you have chosen a location click `Next`.
+
+*************
+
 ![](img/installgit/installgit4.png)
 
 *************
@@ -91,6 +112,10 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 *************
 
 ## Step 5
+
+Select the components you want to install. Ensure that at least the boxes shown in the screenshot below have been checked. Click `Next`.
+
+*************
 
 ![](img/installgit/installgit5.png)
 
@@ -102,6 +127,10 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 ## Step 6
 
+This step is to select where you want the shortcut location to be stored. I have chosen the default. Then click `Next`. 
+
+*************
+
 ![](img/installgit/installgit6.png)
 
 *************
@@ -111,6 +140,10 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 *************
 
 ## Step 7
+
+Git can be used from the command line also. Selecting the second option allows you this flexibility for when you become familiar with Git. _Note: you might see different options on a Mac, if you don't know which option to choose, select the default_ 
+
+*************
 
 ![](img/installgit/installgit7.png)
 
@@ -122,6 +155,10 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 ## Step 8
 
+Select the (recommended) first option and click `Next`. _Note: you might see different options on a Mac, if you don't know which option to choose, select the default_ 
+
+*************
+
 ![](img/installgit/installgit8.png)
 
 *************
@@ -131,6 +168,10 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 *************
 
 ## Step 9
+
+Select the (recommended) first option and click `Next`. _Note: you might see different options on a Mac, if you don't know which option to choose, select the default_ 
+
+*************
 
 ![](img/installgit/installgit9.png)
 
@@ -142,6 +183,10 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 ## Step 10
 
+Ensure that at least the `Enable Git Credential Manager` box is checked, and click `Next`.
+
+*************
+
 ![](img/installgit/installgit10.png)
 
 *************
@@ -152,6 +197,10 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 ## Step 11
 
+You should see now see the following installation screen. 
+
+*************
+
 ![](img/installgit/installgit11.png)
 
 *************
@@ -161,6 +210,10 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 *************
 
 ## Step 12
+
+The following screen will appear once the Git setup has successfully completed. Click on `Finish`. Well done, you have installed Git on your system. Proceed to Chapter 2 to signup for a GitHub account. 
+
+*************
 
 ![](img/installgit/installgit12.png)
 
@@ -173,7 +226,15 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 # Chapter 2: Signup for a GitHub account and `hello world` tutorial {.tabset}
 
+In this short Chapter, you will signup for a GitHub account. GitHub is like your online portfolio of code. It has a plethora of great features for creating websites, project pages and collaborating with others. Again GitHub is an interface to the version control system called Git. Other options include [Bitbucket](https://bitbucket.org/) and [GitLab](https://about.gitlab.com/).
+
+*************
+
 ## Step 1
+
+Go to [https://github.com/](https://github.com/).
+
+*************
 
 ![](img/signup/signup1.png)
 
@@ -185,6 +246,10 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 ## Step 2
 
+The longest step in this chapter is choosing your username. Think about it carefully; it will be how you are recognized on GitHub i.e., your github website address will be github.com/username. Once you have chosen a username, enter a valid email address and password, and click on the `Sign up for GitHub` button.
+
+*************
+
 ![](img/signup/signup2.png)
 
 *************
@@ -194,6 +259,10 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 *************
 
 ## Step 3
+
+Choose the free plan (default) and click on the `Finish sign up` button. 
+
+*************
 
 ![](img/signup/signup3.png)
 
@@ -205,6 +274,10 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 ## Step 4
 
+Well done. You now have a GitHub account. Complete the `Hello World` guide which will walk you through some functionalities of GitHub. Click on the `Let's get started!` button. 
+
+*************
+
 ![](img/signup/signup4.png)
 
 *************
@@ -214,6 +287,10 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 *************
 
 ## Step 5
+
+Complete the exercises and move on to Chapter 3: Installing GitHub Desktop. 
+
+*************
 
 ![](img/signup/signup5.png)
 
@@ -225,7 +302,13 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 # Chapter 3: Installing GitHub Desktop {.tabset}
 
+Traditionally, version control with Git is accessed through the command line or terminal. GitHub Desktop is a software program that makes it easier to use Git functions without having to use the command line. It also allows you to communicate with your GitHub website (github.com/username). Don't worry if the differences between Git, GitHub and GitHub Desktop are not clear to you yet. You will have a better understanding once you have completed this tutorial. 
+
 ## Step 1
+
+Go to [https://desktop.github.com/](https://desktop.github.com/) and click on `Download GitHub Desktop`.
+
+*************
 
 ![](img/desktop/desktop1.png)
 
@@ -238,6 +321,9 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 ## Step 2
 
+
+*************
+
 ![](img/desktop/desktop2.png)
 
 *************
@@ -248,6 +334,8 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 
 ## Step 3
+
+*************
 
 ![](img/desktop/desktop3.png)
 
@@ -260,6 +348,8 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 ## Step 4
 
+*************
+
 ![](img/desktop/desktop4.png)
 
 *************
@@ -270,6 +360,8 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 
 ## Step 5
+
+*************
 
 ![](img/desktop/desktop5.png)
 
@@ -282,6 +374,8 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 ## Step 6
 
+*************
+
 ![](img/desktop/desktop6.png)
 
 *************
@@ -292,6 +386,8 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 
 ## Step 7
+
+*************
 
 ![](img/desktop/desktop7.png)
 
@@ -304,6 +400,8 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 ## Step 8
 
+*************
+
 ![](img/desktop/desktop8.png)
 
 *************
@@ -314,6 +412,8 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 
 ## Step 9
+
+*************
 
 ![](img/desktop/desktop9.png)
 
@@ -326,6 +426,8 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 ## Step 10
 
+*************
+
 ![](img/desktop/desktop10.png)
 
 *************
@@ -336,6 +438,8 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 
 ## Step 11
+
+*************
 
 ![](img/desktop/desktop11.png)
 
@@ -348,6 +452,8 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 ## Step 12
 
+*************
+
 ![](img/desktop/desktop12.png)
 
 *************
@@ -359,6 +465,8 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 ## Step 13
 
+*************
+
 ![](img/desktop/desktop14.png)
 
 *************
@@ -369,6 +477,8 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 
 ## Step 14
+
+*************
 
 ![](img/desktop/desktop15.png)
 
