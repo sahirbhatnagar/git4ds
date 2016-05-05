@@ -302,11 +302,13 @@ Complete the exercises and move on to Chapter 3: Installing GitHub Desktop.
 
 # Chapter 3: Installing GitHub Desktop {.tabset}
 
-Traditionally, version control with Git is accessed through the command line or terminal. GitHub Desktop is a software program that makes it easier to use Git functions without having to use the command line. It also allows you to communicate with your GitHub website (github.com/username). Don't worry if the differences between Git, GitHub and GitHub Desktop are not clear to you yet. You will have a better understanding once you have completed this tutorial. 
+Traditionally, version control with Git is accessed through the command line or terminal. GitHub Desktop is a software program that makes it easier to use Git functions without having to use the command line. It also allows you to communicate with your GitHub website (github.com/username). Don't worry if the differences between Git, GitHub and GitHub Desktop are not clear to you yet. You will have a better understanding once you have completed this tutorial. _Note: in all the screenshots that follow, my username is shown, however you should be entering your username, password and email address created in Chapter 2._
+
+*************
 
 ## Step 1
 
-Go to [https://desktop.github.com/](https://desktop.github.com/) and click on `Download GitHub Desktop`.
+Go to [https://desktop.github.com/](https://desktop.github.com/) and click on `Download GitHub Desktop`. _Note: GitHub desktop is only available for Windows and Mac. If you are running Linux I recommend [GitKraken](https://www.gitkraken.com/)._ 
 
 *************
 
@@ -321,6 +323,7 @@ Go to [https://desktop.github.com/](https://desktop.github.com/) and click on `D
 
 ## Step 2
 
+Once the program has finished downloading, click on `GitHubSetup.exe` (or `.dmg` on a Mac).
 
 *************
 
@@ -335,6 +338,8 @@ Go to [https://desktop.github.com/](https://desktop.github.com/) and click on `D
 
 ## Step 3
 
+Click on `Install`.
+
 *************
 
 ![](img/desktop/desktop3.png)
@@ -347,6 +352,8 @@ Go to [https://desktop.github.com/](https://desktop.github.com/) and click on `D
 
 
 ## Step 4
+
+You should see this installation screen.
 
 *************
 
@@ -361,6 +368,8 @@ Go to [https://desktop.github.com/](https://desktop.github.com/) and click on `D
 
 ## Step 5
 
+Once installed, open up the program and login using the GitHub username and password you created in Chapter 2 and click on `Log in`. 
+
 *************
 
 ![](img/desktop/desktop5.png)
@@ -373,6 +382,8 @@ Go to [https://desktop.github.com/](https://desktop.github.com/) and click on `D
 
 
 ## Step 6
+
+This information is used to identify the person that made the changes to your code. Leave the default values and click on `Continue`. 
 
 *************
 
@@ -387,6 +398,10 @@ Go to [https://desktop.github.com/](https://desktop.github.com/) and click on `D
 
 ## Step 7
 
+You should see this screen, since you haven't created any local repositories yet. 
+
+> What is a repository? The purpose of Git is to manage a project, or a set of files, as they change over time. Git stores this information in a data structure called a repository^[[https://www.sbf5.com/~cduan/technical/git/git-1.shtml](https://www.sbf5.com/~cduan/technical/git/git-1.shtml)].
+
 *************
 
 ![](img/desktop/desktop7.png)
@@ -399,6 +414,8 @@ Go to [https://desktop.github.com/](https://desktop.github.com/) and click on `D
 
 
 ## Step 8
+
+You should now be at this screen.
 
 *************
 
@@ -413,6 +430,8 @@ Go to [https://desktop.github.com/](https://desktop.github.com/) and click on `D
 
 ## Step 9
 
+Click on the plus button in the top left corner. Your username should appear with a list of your repositories that are currently saved in your online GitHub account. To be able to have a local copy of this repository (by local I mean on your computer hard drive) click on the `Clone` tab and then the `Clone hello-world` button (I am assuming that you completed the `Hello World` tutorial in Step 5 of Chapter 2).
+
 *************
 
 ![](img/desktop/desktop9.png)
@@ -425,6 +444,8 @@ Go to [https://desktop.github.com/](https://desktop.github.com/) and click on `D
 
 
 ## Step 10
+
+Choose where you want to save a local copy of the `Hello World` repository and click `OK`. 
 
 *************
 
@@ -439,6 +460,8 @@ Go to [https://desktop.github.com/](https://desktop.github.com/) and click on `D
 
 ## Step 11
 
+You should now see the following contents in your GitHub desktop program.
+
 *************
 
 ![](img/desktop/desktop11.png)
@@ -451,6 +474,8 @@ Go to [https://desktop.github.com/](https://desktop.github.com/) and click on `D
 
 
 ## Step 12
+
+Using your computer's file explorer (e.g. windows explorer or mac finder), locate the local GitHub repository. If you successfully cloned your repository you will see a `hello-world` folder with a `README.md` file in it, which is the same one you created during the `Hello World` exercise in Chapter 2.
 
 *************
 
@@ -465,6 +490,8 @@ Go to [https://desktop.github.com/](https://desktop.github.com/) and click on `D
 
 ## Step 13
 
+Before moving on to Chapter 4, verify that the GitHub Desktop has added an SSH key for you. An SSH key is used to establish a secure connection between your computer and the online GitHub server. On the far top right hand side of your online GitHub account click on the icon and navigate to `Settings`. 
+
 *************
 
 ![](img/desktop/desktop14.png)
@@ -477,6 +504,8 @@ Go to [https://desktop.github.com/](https://desktop.github.com/) and click on `D
 
 
 ## Step 14
+
+You should see one entry in the `SSH keys` panel. Well done. You are now ready to version control some `R` code in Chapter 4. 
 
 *************
 
