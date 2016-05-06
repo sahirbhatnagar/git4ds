@@ -1786,9 +1786,17 @@ See [https://pages.github.com/](https://pages.github.com/) for more details.
 
 # Chapter 8: Create an online CV {.tabset}
 
+In this chapter you will learn how to create an online CV. The template I have 
+shown is for illustration purposes. The main objective here is for you to have a website 
+that has your CV. I highly recommend the advice given by [Sherri Rose](http://drsherrirose.com/academic-cvs-for-statistical-science-faculty-positions)
+on Academic CVs for Statistical Science Faculty Positions. 
+
 *************
 
 ## Step 1
+
+In GitHub Desktop, create a new repository called `cv`. Click on 
+`Create Repository`.
 
 ![](img/cv/cv1.png)
 
@@ -1800,6 +1808,8 @@ See [https://pages.github.com/](https://pages.github.com/) for more details.
 
 
 ## Step 2
+
+Create a `gh-pages` branch and click on `Create new branch`. 
 
 *************
 
@@ -1814,6 +1824,11 @@ See [https://pages.github.com/](https://pages.github.com/) for more details.
 
 ## Step 3
 
+Save [the template CV](https://raw.githubusercontent.com/git4ds/cv/gh-pages/index.Rmd) in the 
+newly created `cv` repository on your computer^[(https://mszep.github.io/pandoc_resume/)[https://mszep.github.io/pandoc_resume/]]. 
+Open the file in RStudio and click on 
+the <img src="img/rmarkdown/rmarkdown00.png" alt="Drawing" style="width: 70px;"/> button. 
+
 *************
 
 ![](img/cv/cv3.png)
@@ -1826,6 +1841,9 @@ See [https://pages.github.com/](https://pages.github.com/) for more details.
 
 
 ## Step 4
+
+Commit the changes in GitHub Desktop. Click on `Commit to gh-pages`. 
+
 
 *************
 
@@ -1840,6 +1858,8 @@ See [https://pages.github.com/](https://pages.github.com/) for more details.
 
 ## Step 5
 
+Click on `Publish` to _push_ your changes to your online GitHub account. 
+
 *************
 
 ![](img/cv/cv5.png)
@@ -1852,6 +1872,8 @@ See [https://pages.github.com/](https://pages.github.com/) for more details.
 
 
 ## Step 6
+
+After entering a description of the repository click on `Publish cv`.
 
 *************
 
@@ -1866,6 +1888,8 @@ See [https://pages.github.com/](https://pages.github.com/) for more details.
 
 ## Step 7
 
+Your GitHub Desktop should now be _clean_. 
+
 *************
 
 ![](img/cv/cv7.png)
@@ -1878,6 +1902,8 @@ See [https://pages.github.com/](https://pages.github.com/) for more details.
 
 
 ## Step 8
+
+Go to your online GitHub account and navigate to the `cv` repository
 
 *************
 
@@ -1892,6 +1918,8 @@ See [https://pages.github.com/](https://pages.github.com/) for more details.
 
 ## Step 9
 
+In setting you should see that your site has been published. 
+
 *************
 
 ![](img/cv/cv9.png)
@@ -1904,6 +1932,8 @@ See [https://pages.github.com/](https://pages.github.com/) for more details.
 
 
 ## Step 10
+
+Well done. You now have an online CV. 
 
 *************
 
