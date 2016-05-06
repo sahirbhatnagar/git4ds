@@ -1825,7 +1825,7 @@ Create a `gh-pages` branch and click on `Create new branch`.
 ## Step 3
 
 Save [the template CV](https://raw.githubusercontent.com/git4ds/cv/gh-pages/index.Rmd) in the 
-newly created `cv` repository on your computer^[(https://mszep.github.io/pandoc_resume/)[https://mszep.github.io/pandoc_resume/]]. 
+newly created `cv` repository on your computer^[[https://mszep.github.io/pandoc_resume/](https://mszep.github.io/pandoc_resume/)]. 
 Open the file in RStudio and click on 
 the <img src="img/rmarkdown/rmarkdown00.png" alt="Drawing" style="width: 70px;"/> button. 
 
