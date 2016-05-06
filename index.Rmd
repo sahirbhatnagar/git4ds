@@ -75,6 +75,7 @@ and github for data science oriented people including:
 
 - [Stat 545 at UBC by Jenny Bryan](http://stat545.com/git00_index.html)
 - [Advanced R by Hadley Wickham](http://r-pkgs.had.co.nz/git.html)
+- [Using branches by Atlassian](https://www.atlassian.com/git/tutorials/using-branches/)
 
 
 *************
@@ -1290,7 +1291,7 @@ and select `Delete clustering...`.
 ## Step 18
 
 You will now only see the master branch in both the dropdown list and the black
-rectangular box.
+rectangular box. 
 
 *************
 
@@ -1302,14 +1303,21 @@ rectangular box.
 *************
 *************
 
-## References
-
-- [https://www.atlassian.com/git/tutorials/using-branches/](https://www.atlassian.com/git/tutorials/using-branches/)
 
 
 # Chapter 6: Brief Intro to Rstudio Git functionality {.tabset}
 
+RStudio also has the ability to interact with Git and GitHub, similar to 
+GitHub Desktop. I will briefly show how to initiate this by creating an 
+`RStudio project`. More comprehensive resources can be found 
+[here](http://www.datasurg.net/2015/07/13/rstudio-and-github/) and
+[here](http://r-pkgs.had.co.nz/git.html).
+
+*************
+
 ## Step 1
+
+In RStudio go to `File -> New Project ...`
 
 *************
 
@@ -1324,6 +1332,9 @@ rectangular box.
 
 ## Step 2
 
+Choose the second option: `Existing Directory` and select the folder which
+contains the `pcaCars` repository.
+
 *************
 
 ![](img/rstudiogit/rstudiogit2.png)
@@ -1336,6 +1347,9 @@ rectangular box.
 
 
 ## Step 3
+
+Notice the `Git` tab next to the `History` tab in the top right panel. It is empty
+because no changes have been made to the repositor.
 
 *************
 
@@ -1350,6 +1364,9 @@ rectangular box.
 
 ## Step 4
 
+We don't want to version control the files associated with the RStudio project.
+Open the `.gitignore` file
+
 *************
 
 ![](img/rstudiogit/rstudiogit4.png)
@@ -1362,6 +1379,9 @@ rectangular box.
 
 
 ## Step 5
+
+Add the names of these files in the `.gitignore` text file as shown in the 
+screenshot below and save the file.
 
 *************
 
@@ -1376,6 +1396,9 @@ rectangular box.
 
 ## Step 6
 
+In the `Git` tab you will now notice the `.gitignore` file has appeared because
+you have made changes to it. 
+
 *************
 
 ![](img/rstudiogit/rstudiogit6.png)
@@ -1388,6 +1411,8 @@ rectangular box.
 
 
 ## Step 7
+
+You will also notice these changes in GitHub Desktop. 
 
 *************
 
@@ -1402,6 +1427,8 @@ rectangular box.
 
 ## Step 8
 
+Describe the commit and click on `Commit to master`. 
+
 *************
 
 ![](img/rstudiogit/rstudiogit8.png)
@@ -1414,6 +1441,8 @@ rectangular box.
 
 
 ## Step 9
+
+`Sync` the _local_ repository with the _remote_.
 
 *************
 
@@ -1428,6 +1457,10 @@ rectangular box.
 
 ## Step 10
 
+RStudio can also handle _branches_. To see this, click on the branch symbol 
+<img src="img/branch/branch00.png" alt="Drawing" style="width: 25px;"/>, and create
+a branch called `gh-pages`
+
 *************
 
 ![](img/rstudiogit/rstudiogit10.png)
@@ -1440,6 +1473,10 @@ rectangular box.
 
 
 ## Step 11
+
+In RStudio you should see a dropdown list of branches in the top right hand
+corner of the `Git` panel. You should now be in the `gh-pages` branch for Chapter 7.
+_Note: this branch must be called `gh-pages`; you will find out why in the next chapter_
 
 *************
 
