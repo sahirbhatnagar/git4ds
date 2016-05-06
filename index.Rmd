@@ -23,14 +23,14 @@ screenshots, so that you become familiar with its main functionalities.
 
 This tutorial is intended for grad students and academics who use 
 [`R`](https://cran.r-project.org/) but are unfamiliar with the _command line_ 
-or _terminal_. I assume nothing about the computer science skills of the user. 
+or _terminal_. I assume nothing about the computer science skills of the user, but do
+assume basic knowledge of `R` and `RStudio`.
 
 ## What
 
-The outline is provided in the floating table of contents. Chapters 1-3 have 
-no pre-requisites in terms of software. Chapters 4-8 require a working 
-installation of [`R`](https://cran.r-project.org/) and 
-[`RStudio`](https://www.rstudio.com/products/rstudio/download/preview/).
+The outline is provided in the floating table of contents. You will learn the essential 
+concepts and terminology of version control, Git, GitHub and GitHub desktop. This 
+tutorial follows a _learn-by-doing_ approach. 
 
 ## Why
 
@@ -48,6 +48,22 @@ and [here](http://stat545.com/git01_git-install.html#but-first-why).
 Each of the topics covered are separated by chapters that should be followed 
 sequentially. Within each chapter, there are a series of steps that you need 
 to complete. Each step starts with some instructions followed by a screenshot. 
+
+## Pre-requisites
+
+Chapters 1-3 have no pre-requisites in terms of software. Chapters 4-8 require a working 
+installation of [`R`](https://cran.r-project.org/) and 
+[`RStudio`](https://www.rstudio.com/products/rstudio/download/preview/).
+
+## What this isn't
+
+It is _not_ a comprehensive tutorial of all the intracacies of Git. I skip over 
+many fine details, because the main goal of this tutorial is an introduction 
+to essential concepts and terminology of version control, Git, and GitHub.
+
+It covers a variety of topics that could each be its own book. There are a plethora of
+online resources available for everything covered here but you can't Google something
+if you don't know what you're looking for in the first place. 
 
 *************
 *************
@@ -925,7 +941,37 @@ repository.
 
 # Chapter 5: Create a branch, pull request, merge {.tabset}
 
+In this chapter you will learn what the words `branch`, `pull request` and `merge` mean
+in the GitHub world. _Branching_ is a much more efficient and safe alternative to 
+having files in a project like this:
+
+- pcaCars_v1.R
+- pcaCars_v2_hierarchical_clustering_Sept_2015.R
+- pcaCars_v3_bayesian_clustering_not_working.R
+
+This image^[[https://confluence.atlassian.com/bitbucket/use-a-git-branch-to-merge-a-file-681902555.html](https://confluence.atlassian.com/bitbucket/use-a-git-branch-to-merge-a-file-681902555.html)] nicely summarised what _branching_ is useful for:
+
+*************
+
+![](img/branch/branch0.png)
+
+*************
+
+When you have a new idea, or want to test out some existing method but don't want to
+modify your working script, then creating a branch is what you should do. 
+
+> A branch represents an independent line of development. You can think of 
+them as a way to request a brand new working directory^[[https://www.atlassian.com/git/tutorials/using-branches](https://www.atlassian.com/git/tutorials/using-branches)].
+
+
+*************
+
 ## Step 1
+
+Click on the branch symbol <img src="img/branch/branch00.png" alt="Drawing" style="width: 25px;"/> and 
+name the branch `clustering`. The `From branch` entry indicates what the starting point of the `clustering` 
+branch should be (you will see what this means shortly). Since there are no other branches
+present, `master` is chosen by default. Click on `Create new branch`.
 
 *************
 
@@ -940,6 +986,9 @@ repository.
 
 ## Step 2
 
+You have now switched to the `clustering` branch. Notice the second timeline 
+labelled `clustering` underneath the `master` in the black rectangular box.
+
 *************
 
 ![](img/branch/branch2.png)
@@ -952,6 +1001,10 @@ repository.
 
 
 ## Step 3
+
+You will also see a list of branches in this repository in the dropdown list
+next to the branch symbol <img src="img/branch/branch00.png" alt="Drawing" style="width: 25px;"/>. 
+The checkmark indicates the branch you are currently on. 
 
 *************
 
@@ -966,6 +1019,45 @@ repository.
 
 ## Step 4
 
+The motivation for creating this branch is that we want test out some code
+to cluster the cars based on principal component scores. Go to RStudio and add 
+the following code to `pca.R` and save the file. You will need to install the 
+[`ggplot2`](https://cran.r-project.org/web/packages/ggplot2/) and 
+[`ggrepel`](https://cran.r-project.org/web/packages/ggrepel/index.html) packages from CRAN
+
+```{r eval=FALSE}
+# cluster cars
+carsHC <- hclust(dist(pcaCars$scores), method = "ward.D2")
+
+# dendrogram
+plot(carsHC)
+
+# cut the dendrogram into 3 clusters
+carsClusters <- cutree(carsHC, k = 3)
+
+# add cluster to data frame of scores
+carsDf <- data.frame(pcaCars$scores, "cluster" = factor(carsClusters))
+str(carsDf)
+
+# plot the first 2 PCs with cluster membership
+# need to install ggplot2 and ggrepel packages first
+# using the following command in R: 
+# install.packages(c("ggplot2","ggrepel"))
+library(ggplot2)
+library(ggrepel)
+ggplot(carsDf,aes(x=Comp.1, y=Comp.2)) +
+  geom_text_repel(aes(label = rownames(carsDf))) +
+  theme_classic() +
+  geom_hline(yintercept = 0, color = "gray70") +
+  geom_vline(xintercept = 0, color = "gray70") +
+  geom_point(aes(color = cluster), alpha = 0.55, size = 3) +
+  xlab("PC1") +
+  ylab("PC2") + 
+  xlim(-5, 6) + 
+  ggtitle("PCA plot of Cars")
+```
+
+
 *************
 
 ![](img/branch/branch4.png)
@@ -978,6 +1070,10 @@ repository.
 
 
 ## Step 5
+
+Go to GitHub Desktop, click on the `pca.R` file and you will see the changes made
+have been highlighted. Describe the changes you have made and then click on 
+`Commit to clustering`. 
 
 *************
 
@@ -992,6 +1088,9 @@ repository.
 
 ## Step 6
 
+_Push_ your local change to your online GitHub repository (i.e. the _remote_) 
+by clicking on the `Publish` button. 
+
 *************
 
 ![](img/branch/branch6.png)
@@ -1004,6 +1103,8 @@ repository.
 
 
 ## Step 7
+
+You will see the `clustering` branch appear in the `Branch` dropdown menu. 
 
 *************
 
@@ -1018,6 +1119,9 @@ repository.
 
 ## Step 8
 
+Select the `clustering` branch and confirm that your changes to the `pca.R` script
+are there. 
+
 *************
 
 ![](img/branch/branch8.png)
@@ -1030,6 +1134,10 @@ repository.
 
 
 ## Step 9
+
+Switch back to the `master` branch. _Why isn't the clutering code there?_ Because
+you _commit_ your changes to the `clustering` branch and _not_ the `master` branch. 
+It should become a little more clear now what _branching_ is and it's utility.
 
 *************
 
@@ -1044,6 +1152,17 @@ repository.
 
 ## Step 10
 
+If you're content with the clustering results, it's time to merge the clustering code 
+which is sitting on the `clustering` branch with the PCA code on the `master` branch. 
+This is accomplished via a `pull request`. A `pull request` is the first step in merging two branches. 
+It tells GitHub that you have committed changes to the repository and allows you to review the changes. 
+_Note: `pull requests` are a GitHub functionality and is not part of Git._ 
+
+************
+
+Click on the `Pull request` button in GitHub Desktop, enter a summary and description
+of the proposed changes and why you did them. Then click on `Send pull request`. 
+
 *************
 
 ![](img/branch/branch10.png)
@@ -1056,6 +1175,9 @@ repository.
 
 
 ## Step 11
+
+Click on `View it on GitHub`. This will open the submitted `pull request` in the 
+`pcaCars` repositor of your online GitHub account.
 
 *************
 
@@ -1070,6 +1192,10 @@ repository.
 
 ## Step 12
 
+GitHub will automatically check that the merge can be completed without any 
+conflicts. If there are no conflicts you will see the following screen. Click on 
+`Merge pull request`. 
+
 *************
 
 ![](img/branch/branch12.png)
@@ -1082,6 +1208,8 @@ repository.
 
 
 ## Step 13
+
+Enter a comment about the pull request (optional) and click on `Confirm merge`.
 
 *************
 
@@ -1096,6 +1224,11 @@ repository.
 
 ## Step 14
 
+Well done. You have successfully created a _branch_, submitted a _pull request_ and 
+_merged_ your changes from the `clustering` branch to the `master` branch. You can 
+delete the `clustering` branch as it is no longer needed because these changes
+are now in the `master` branch. 
+
 *************
 
 ![](img/branch/branch14.png)
@@ -1107,6 +1240,9 @@ repository.
 *************
 
 ## Step 15
+
+In the `Branch` dropdown list you will only see the `master` branch. You will 
+also notice that the clustering code has been merged with the PCA code. 
 
 *************
 
@@ -1120,6 +1256,10 @@ repository.
 
 ## Step 16
 
+The _merge_ was done online. We now want to see these changes reflected on our
+computer (i.e. _locally_). To do this, go to GitHub Desktop and click on 
+the `Sync` button.  
+
 *************
 
 ![](img/branch/branch16.png)
@@ -1131,6 +1271,11 @@ repository.
 *************
 
 ## Step 17
+
+Notice that the `clustering` branch still exists even though you delete it 
+in your online GitHub repository. _Why?_ Because you did not delete the branch 
+locally (i.e. it still exists on your computer). Click on the settings dropdown menu
+and select `Delete clustering...`. 
 
 *************
 
@@ -1144,6 +1289,9 @@ repository.
 
 ## Step 18
 
+You will now only see the master branch in both the dropdown list and the black
+rectangular box.
+
 *************
 
 ![](img/branch/branch18.png)
@@ -1153,6 +1301,10 @@ repository.
 *************
 *************
 *************
+
+## References
+
+- [https://www.atlassian.com/git/tutorials/using-branches/](https://www.atlassian.com/git/tutorials/using-branches/)
 
 
 # Chapter 6: Brief Intro to Rstudio Git functionality {.tabset}
