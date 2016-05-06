@@ -2,44 +2,60 @@
 title: GitHub for Data Scientists without the Terminal
 output:
   html_document:
-    code_folding: hide
     toc: true
     toc_float: true
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, tidy = TRUE, cache = FALSE, warning = FALSE, 
+knitr::opts_chunk$set(echo = TRUE, tidy = FALSE, cache = FALSE, warning = FALSE, 
                message = FALSE)
 knitr::opts_knit$set(eval.after = 'fig.cap')
 ```
 
 # Introduction
 
-In this tutorial you will learn how to get started with version control using [git](https://git-scm.com/) and [GitHub](https://github.com/). The main goal here is to provide a step-by-step introduction to GitHub, with detailed screenshots, so that you become familiar with its main functionalities. 
+In this tutorial you will learn how to get started with version control using 
+[git](https://git-scm.com/) and [GitHub](https://github.com/). The main goal 
+here is to provide a step-by-step introduction to GitHub, with detailed 
+screenshots, so that you become familiar with its main functionalities. 
 
 ## Who
 
-This tutorial is intended for grad students and academics who use [`R`](https://cran.r-project.org/) but are unfamiliar with the _command line_ or _terminal_. I assume nothing about the computer science skills of the user. 
+This tutorial is intended for grad students and academics who use 
+[`R`](https://cran.r-project.org/) but are unfamiliar with the _command line_ 
+or _terminal_. I assume nothing about the computer science skills of the user. 
 
 ## What
 
-The outline is provided in the floating table of contents.
+The outline is provided in the floating table of contents. Chapters 1-3 have 
+no pre-requisites in terms of software. Chapters 4-8 require a working 
+installation of [`R`](https://cran.r-project.org/) and 
+[`RStudio`](https://www.rstudio.com/products/rstudio/download/preview/).
 
 ## Why
 
-Familiarity with GitHub has become an indispensible tool for anyone working with data. Sharing code, writing software for your statistical method, producing techincal reports and creating websites have become essential skills to have in the rapidly growing field of data science. 
-Other answers can be found [here](https://www.quora.com/Should-I-learn-Git-when-I-just-start-programming), [here](http://stackoverflow.com/questions/2658/getting-started-with-version-control) and [here](http://stat545.com/git01_git-install.html#but-first-why).
+Familiarity with GitHub has become an indispensible tool for anyone working 
+with data. Sharing code, writing software for your statistical method, 
+producing techincal reports and creating websites have become essential 
+skills to have in the rapidly growing field of data science. 
+Other answers can be found 
+[here](https://www.quora.com/Should-I-learn-Git-when-I-just-start-programming), 
+[here](http://stackoverflow.com/questions/2658/getting-started-with-version-control) 
+and [here](http://stat545.com/git01_git-install.html#but-first-why).
 
 ## How
 
-Each of the topics covered are separated by chapters that should be followed sequentially. Within each chapter, there are a series of steps that you need to complete. Each step starts with some instructions followed by a screenshot. 
+Each of the topics covered are separated by chapters that should be followed 
+sequentially. Within each chapter, there are a series of steps that you need 
+to complete. Each step starts with some instructions followed by a screenshot. 
 
 *************
 *************
 
 ## Related Work
 
-There are several comprehensive online resources available for learning git and github for data science oriented people including:
+There are several comprehensive online resources available for learning git 
+and github for data science oriented people including:
 
 - [Stat 545 at UBC by Jenny Bryan](http://stat545.com/git00_index.html)
 - [Advanced R by Hadley Wickham](http://r-pkgs.had.co.nz/git.html)
@@ -57,7 +73,10 @@ _Note: the screenshots provided here are from a Windows operating system, howeve
 
 ## Step 1
 
-Git is to GitHub, what R is to RStudio. In other words Git is the software that does all the work behind the scenes, and GitHub a user interface that makes its easier to communicate with Git (and adds functionality as well). [Download Git](https://git-scm.com/downloads)
+Git is to GitHub, what R is to RStudio. In other words Git is the software that 
+does all the work behind the scenes, and GitHub a user interface that makes its 
+easier to communicate with Git (and adds functionality as well). 
+[Download Git](https://git-scm.com/downloads)
 
 *************
 
@@ -71,7 +90,8 @@ Git is to GitHub, what R is to RStudio. In other words Git is the software that 
 
 ## Step 2
 
-Once the download has completed, click on the `Git-2.7.4 64-bit.exe` file (`.dmg` on a Mac, or `.deb` on Linux). _Note: the version you download might be different than what I've shown here, but that's ok_
+Once the download has completed, click on the `Git-2.7.4 64-bit.exe` file 
+(`.dmg` on a Mac, or `.deb` on Linux). _Note: the version you download might be different than what I've shown here, but that's ok_
 
 *************
 
@@ -85,7 +105,8 @@ Once the download has completed, click on the `Git-2.7.4 64-bit.exe` file (`.dmg
 
 ## Step 3
 
-Once you have read the GNU General Public License (this is not required to continue) click on `Next`. 
+Once you have read the GNU General Public License (this is not required 
+to continue) click on `Next`. 
 
 *************
 
@@ -99,7 +120,9 @@ Once you have read the GNU General Public License (this is not required to conti
 
 ## Step 4
 
-You need to select where you want Git installed. I have chosen the default location `Program Files`, but you can change this if you like by clicking on the `Browse...` button. Once you have chosen a location click `Next`.
+You need to select where you want Git installed. I have chosen the default 
+location `Program Files`, but you can change this if you like by clicking on 
+the `Browse...` button. Once you have chosen a location click `Next`.
 
 *************
 
@@ -113,7 +136,8 @@ You need to select where you want Git installed. I have chosen the default locat
 
 ## Step 5
 
-Select the components you want to install. Ensure that at least the boxes shown in the screenshot below have been checked. Click `Next`.
+Select the components you want to install. Ensure that at least the boxes 
+shown in the screenshot below have been checked. Click `Next`.
 
 *************
 
@@ -127,7 +151,8 @@ Select the components you want to install. Ensure that at least the boxes shown 
 
 ## Step 6
 
-This step is to select where you want the shortcut location to be stored. I have chosen the default. Then click `Next`. 
+This step is to select where you want the shortcut location to be stored. I 
+have chosen the default. Then click `Next`. 
 
 *************
 
@@ -141,7 +166,9 @@ This step is to select where you want the shortcut location to be stored. I have
 
 ## Step 7
 
-Git can be used from the command line also. Selecting the second option allows you this flexibility for when you become familiar with Git. _Note: you might see different options on a Mac, if you don't know which option to choose, select the default_ 
+Git can be used from the command line also. Selecting the second option allows 
+you this flexibility for when you become familiar with Git. 
+_Note: you might see different options on a Mac, if you don't know which option to choose, select the default_ 
 
 *************
 
@@ -155,7 +182,8 @@ Git can be used from the command line also. Selecting the second option allows y
 
 ## Step 8
 
-Select the (recommended) first option and click `Next`. _Note: you might see different options on a Mac, if you don't know which option to choose, select the default_ 
+Select the (recommended) first option and click `Next`. 
+_Note: you might see different options on a Mac, if you don't know which option to choose, select the default_ 
 
 *************
 
@@ -169,7 +197,8 @@ Select the (recommended) first option and click `Next`. _Note: you might see dif
 
 ## Step 9
 
-Select the (recommended) first option and click `Next`. _Note: you might see different options on a Mac, if you don't know which option to choose, select the default_ 
+Select the (recommended) first option and click `Next`. 
+_Note: you might see different options on a Mac, if you don't know which option to choose, select the default_ 
 
 *************
 
@@ -211,7 +240,9 @@ You should see now see the following installation screen.
 
 ## Step 12
 
-The following screen will appear once the Git setup has successfully completed. Click on `Finish`. Well done, you have installed Git on your system. Proceed to Chapter 2 to signup for a GitHub account. 
+The following screen will appear once the Git setup has successfully completed. 
+Click on `Finish`. Well done, you have installed Git on your system. Proceed 
+to Chapter 2 to signup for a GitHub account. 
 
 *************
 
@@ -226,7 +257,11 @@ The following screen will appear once the Git setup has successfully completed. 
 
 # Chapter 2: Signup for a GitHub account and `hello world` tutorial {.tabset}
 
-In this short Chapter, you will signup for a GitHub account. GitHub is like your online portfolio of code. It has a plethora of great features for creating websites, project pages and collaborating with others. Again GitHub is an interface to the version control system called Git. Other options include [Bitbucket](https://bitbucket.org/) and [GitLab](https://about.gitlab.com/).
+In this short Chapter, you will signup for a GitHub account. GitHub is like 
+your online portfolio of code. It has a plethora of great features for creating 
+websites, project pages and collaborating with others. Again GitHub is an 
+interface to the version control system called Git. Other options 
+include [Bitbucket](https://bitbucket.org/) and [GitLab](https://about.gitlab.com/).
 
 *************
 
@@ -246,7 +281,10 @@ Go to [https://github.com/](https://github.com/).
 
 ## Step 2
 
-The longest step in this chapter is choosing your username. Think about it carefully; it will be how you are recognized on GitHub i.e., your github website address will be github.com/username. Once you have chosen a username, enter a valid email address and password, and click on the `Sign up for GitHub` button.
+The longest step in this chapter is choosing your username. Think about it 
+carefully; it will be how you are recognized on GitHub i.e., your github website 
+address will be github.com/username. Once you have chosen a username, enter a 
+valid email address and password, and click on the `Sign up for GitHub` button.
 
 *************
 
@@ -274,7 +312,9 @@ Choose the free plan (default) and click on the `Finish sign up` button.
 
 ## Step 4
 
-Well done. You now have a GitHub account. Complete the `Hello World` guide which will walk you through some functionalities of GitHub. Click on the `Let's get started!` button. 
+Well done. You now have a GitHub account. Complete the `Hello World` guide 
+which will walk you through some functionalities of GitHub. Click on 
+the `Let's get started!` button. 
 
 *************
 
@@ -302,13 +342,21 @@ Complete the exercises and move on to Chapter 3: Installing GitHub Desktop.
 
 # Chapter 3: Installing GitHub Desktop {.tabset}
 
-Traditionally, version control with Git is accessed through the command line or terminal. GitHub Desktop is a software program that makes it easier to use Git functions without having to use the command line. It also allows you to communicate with your GitHub website (github.com/username). Don't worry if the differences between Git, GitHub and GitHub Desktop are not clear to you yet. You will have a better understanding once you have completed this tutorial. _Note: in all the screenshots that follow, my username is shown, however you should be entering your username, password and email address created in Chapter 2._
+Traditionally, version control with Git is accessed through the command line or 
+terminal. GitHub Desktop is a software program that makes it easier to use Git 
+functions without having to use the command line. It also allows you to 
+communicate with your GitHub website (github.com/username). Don't worry if the 
+differences between Git, GitHub and GitHub Desktop are not clear to you yet. 
+You will have a better understanding once you have completed this tutorial. 
+_Note: in all the screenshots that follow, my username is shown, however you should be entering your username, password and email address created in Chapter 2._
 
 *************
 
 ## Step 1
 
-Go to [https://desktop.github.com/](https://desktop.github.com/) and click on `Download GitHub Desktop`. _Note: GitHub desktop is only available for Windows and Mac. If you are running Linux I recommend [GitKraken](https://www.gitkraken.com/)._ 
+Go to [https://desktop.github.com/](https://desktop.github.com/) and click 
+on `Download GitHub Desktop`. 
+_Note: GitHub desktop is only available for Windows and Mac. If you are running Linux I recommend [GitKraken](https://www.gitkraken.com/)._ 
 
 *************
 
@@ -368,7 +416,8 @@ You should see this installation screen.
 
 ## Step 5
 
-Once installed, open up the program and login using the GitHub username and password you created in Chapter 2 and click on `Log in`. 
+Once installed, open up the program and login using the GitHub username and 
+password you created in Chapter 2 and click on `Log in`. 
 
 *************
 
@@ -383,7 +432,8 @@ Once installed, open up the program and login using the GitHub username and pass
 
 ## Step 6
 
-This information is used to identify the person that made the changes to your code. Leave the default values and click on `Continue`. 
+This information is used to identify the person that made the changes to your 
+code. Leave the default values and click on `Continue`. 
 
 *************
 
@@ -430,7 +480,12 @@ You should now be at this screen.
 
 ## Step 9
 
-Click on the plus button in the top left corner. Your username should appear with a list of your repositories that are currently saved in your online GitHub account. To be able to have a local copy of this repository (by local I mean on your computer hard drive) click on the `Clone` tab and then the `Clone hello-world` button (I am assuming that you completed the `Hello World` tutorial in Step 5 of Chapter 2).
+Click on the plus button in the top left corner. Your username should appear 
+with a list of your repositories that are currently saved in your online GitHub 
+account. To be able to have a local copy of this repository (by local I mean on 
+your computer hard drive) click on the `Clone` tab and then 
+the `Clone hello-world` button (I am assuming that you completed the `Hello World` 
+tutorial in Step 5 of Chapter 2).
 
 *************
 
@@ -475,7 +530,10 @@ You should now see the following contents in your GitHub desktop program.
 
 ## Step 12
 
-Using your computer's file explorer (e.g. windows explorer or mac finder), locate the local GitHub repository. If you successfully cloned your repository you will see a `hello-world` folder with a `README.md` file in it, which is the same one you created during the `Hello World` exercise in Chapter 2.
+Using your computer's file explorer (e.g. windows explorer or mac finder), 
+locate the local GitHub repository. If you successfully cloned your repository 
+you will see a `hello-world` folder with a `README.md` file in it, which is 
+the same one you created during the `Hello World` exercise in Chapter 2.
 
 *************
 
@@ -490,7 +548,10 @@ Using your computer's file explorer (e.g. windows explorer or mac finder), locat
 
 ## Step 13
 
-Before moving on to Chapter 4, verify that the GitHub Desktop has added an SSH key for you. An SSH key is used to establish a secure connection between your computer and the online GitHub server. On the far top right hand side of your online GitHub account click on the icon and navigate to `Settings`. 
+Before moving on to Chapter 4, verify that the GitHub Desktop has added an 
+SSH key for you. An SSH key is used to establish a secure connection between 
+your computer and the online GitHub server. On the far top right hand side of 
+your online GitHub account click on the icon and navigate to `Settings`. 
 
 *************
 
@@ -505,7 +566,8 @@ Before moving on to Chapter 4, verify that the GitHub Desktop has added an SSH k
 
 ## Step 14
 
-You should see one entry in the `SSH keys` panel. Well done. You are now ready to version control some `R` code in Chapter 4. 
+You should see one entry in the `SSH keys` panel. Well done. You are now ready 
+to version control some `R` code in Chapter 4. 
 
 *************
 
@@ -520,7 +582,18 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 # Chapter 4: Version control `R` code using an example of PCA {.tabset}
 
+In this chapter we will learn how to version control `R` code using an example 
+of Principal Component Analysis.
+
 ## Step 1
+
+Create a local (meaning on your computer) repository by clickling the plus 
+button in the top left corner of GitHub Desktop, and select the `Create` tab. 
+Name the repository `pcaCars` and select where you want this repository stored 
+on your computer. Leave the `Git ignore` value at its default (we will ignore what
+this is for now). Click on `Create repository`.
+
+*************
 
 ![](img/rcode/rcode1.png)
 
@@ -533,6 +606,15 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 2
 
+You should see the following in your GitHub Desktop. A repository called 
+`pcaCars` has been created locally on your computer, and it contains two 
+text files that were automatically created by the software. You can click on them 
+to see their contents. The most important of the two is the `.gitignore` file. 
+This text file allows you to control what you want to version control within the
+`pcaCars` repository. 
+
+*************
+
 ![](img/rcode/rcode2.png)
 
 *************
@@ -543,6 +625,12 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 3
+
+We now want to publish this repository to the remote (i.e. github.com/username). 
+Simply click on the `Publish` button in the top right hand corner. Add a description
+and click on `Publish pcaCars`.
+
+*************
 
 ![](img/rcode/rcode3.png)
 
@@ -555,6 +643,13 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 4
 
+Head over to your online github account (e.g. [https://github.com/git4ds](https://github.com/git4ds)). 
+You should see the `pcaCars` repository along with the description you entered in the 
+previous step. 
+
+
+*************
+
 ![](img/rcode/rcode4.png)
 
 *************
@@ -565,6 +660,11 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 5
+
+Click on the `pcaCars` repository and you will see the `.gitattributes` and 
+`.gitignore` files which are the same ones you have in your local repository.
+
+*************
 
 ![](img/rcode/rcode5.png)
 
@@ -577,6 +677,11 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 6
 
+Open RStudio, navigate to the `pcaCars` repository and set it as your working
+directory using the `setwd()` function
+
+*************
+
 ![](img/rcode/rcode6.png)
 
 *************
@@ -587,6 +692,26 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 7
+
+Save the following code in an R script called `pca.R`
+
+```{r eval=FALSE}
+# cor = TRUE indicates that PCA is performed on 
+# standardized data (mean = 0, variance = 1)
+pcaCars <- princomp(mtcars, cor = TRUE)
+
+# view objects stored in pcaCars
+names(pcaCars)
+
+# proportion of variance explained
+summary(pcaCars)
+
+# scree plot
+plot(pcaCars, type = "l")
+```
+
+
+*************
 
 ![](img/rcode/rcode7.png)
 
@@ -599,6 +724,13 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 8
 
+Go back to GitHub Desktop. You will see the `pca.R` file appear. Click on the
+checkbox to the left of it, and you will see all the additions you have made
+to the file. 
+
+
+*************
+
 ![](img/rcode/rcode8.png)
 
 *************
@@ -609,6 +741,13 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 9
+
+On the bottom left hand side, enter a summary of the changes you have made to 
+the repository and an (optional) description. Then click on `Commit to master`. 
+This is essentially telling Git to record the changes you have made and store them
+in a branch. We will learn about branches in Chapter 5.
+
+*************
 
 ![](img/rcode/rcode9.png)
 
@@ -621,6 +760,14 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 10
 
+You should see the following screen. You should notice that in the rectangular 
+black box, underneath the `Sync` button in the top right hand corner of GitHub Desktop,
+a timeline. As you commit additional changes, this timeline will grow. Each circle represents
+a snapshot of the repository at the time of the commit. This is the power of version controlling with 
+Git. You can see what changes you have made, and even revert back to snapshot you want. 
+
+*************
+
 ![](img/rcode/rcode10.png)
 
 *************
@@ -631,6 +778,13 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 11
+
+Go to the `pcaCars` repository in your online GitHub account. Do you see the 
+file you just created called `pca.R` ? _Why not?_ Because the commit you made was local
+to your computer. In order to see these changes online, you must `push` your local
+changes to the `remote`. 
+
+*************
 
 ![](img/rcode/rcode11.png)
 
@@ -643,6 +797,10 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 12
 
+Go to GitHub Desktop and click on the `Sync` button in the top right hand corner.
+
+*************
+
 ![](img/rcode/rcode12.png)
 
 *************
@@ -653,6 +811,10 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 13
+
+You should now see your local changes _pushed_ to your online repository. 
+
+*************
 
 ![](img/rcode/rcode13.png)
 
@@ -665,6 +827,18 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 14
 
+Let's make a change to the `pca.R` script. Instead of a bar plot, we want
+a bar plot of the variance explained for each component:
+
+```{r, eval=FALSE}
+# bar plot
+plot(pcaCars)
+```
+
+Your script should now match what is shown in the screenshot below.
+
+*************
+
 ![](img/rcode/rcode14.png)
 
 *************
@@ -674,6 +848,12 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 *************
 
 ## Step 15
+
+Go to GitHub Desktop and click on the `pca.R` file. You will see that 
+Git automatically recognizes the changes you have made. Highlighted in red
+is what has been removed from the file, and in green is what was added. 
+
+*************
 
 ![](img/rcode/rcode15.png)
 
@@ -685,6 +865,10 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 16
 
+Describe the change you have made and click on `Commit to master`
+
+*************
+
 ![](img/rcode/rcode16.png)
 
 *************
@@ -694,6 +878,12 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 *************
 
 ## Step 17
+
+_Push_ your local changes to the remote repository by clicking on the `Sync` button. 
+You can view the different commits you have made in GitHub Desktop by clicking on 
+the grey circles in the timeline located in the rectangular black box.
+
+*************
 
 ![](img/rcode/rcode17.png)
 
@@ -705,6 +895,10 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 18
 
+Go to your GitHub account online to see that the changes have been updated. 
+
+*************
+
 ![](img/rcode/rcode18.png)
 
 *************
@@ -714,6 +908,11 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 *************
 
 ## Step 19
+
+Click on the `History` button to see a list of commits you have made to the 
+repository.
+
+*************
 
 ![](img/rcode/rcode19.png)
 
@@ -728,6 +927,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 1
 
+*************
+
 ![](img/branch/branch1.png)
 
 *************
@@ -738,6 +939,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 2
+
+*************
 
 ![](img/branch/branch2.png)
 
@@ -750,6 +953,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 3
 
+*************
+
 ![](img/branch/branch3.png)
 
 *************
@@ -760,6 +965,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 4
+
+*************
 
 ![](img/branch/branch4.png)
 
@@ -772,6 +979,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 5
 
+*************
+
 ![](img/branch/branch5.png)
 
 *************
@@ -782,6 +991,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 6
+
+*************
 
 ![](img/branch/branch6.png)
 
@@ -794,6 +1005,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 7
 
+*************
+
 ![](img/branch/branch7.png)
 
 *************
@@ -804,6 +1017,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 8
+
+*************
 
 ![](img/branch/branch8.png)
 
@@ -816,6 +1031,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 9
 
+*************
+
 ![](img/branch/branch9.png)
 
 *************
@@ -826,6 +1043,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 10
+
+*************
 
 ![](img/branch/branch10.png)
 
@@ -838,6 +1057,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 11
 
+*************
+
 ![](img/branch/branch11.png)
 
 *************
@@ -848,6 +1069,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 12
+
+*************
 
 ![](img/branch/branch12.png)
 
@@ -860,6 +1083,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 13
 
+*************
+
 ![](img/branch/branch13.png)
 
 *************
@@ -871,6 +1096,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 14
 
+*************
+
 ![](img/branch/branch14.png)
 
 *************
@@ -880,6 +1107,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 *************
 
 ## Step 15
+
+*************
 
 ![](img/branch/branch15.png)
 
@@ -891,6 +1120,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 16
 
+*************
+
 ![](img/branch/branch16.png)
 
 *************
@@ -901,6 +1132,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 17
 
+*************
+
 ![](img/branch/branch17.png)
 
 *************
@@ -910,6 +1143,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 *************
 
 ## Step 18
+
+*************
 
 ![](img/branch/branch18.png)
 
@@ -924,6 +1159,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 1
 
+*************
+
 ![](img/rstudiogit/rstudiogit1.png)
 
 *************
@@ -934,6 +1171,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 2
+
+*************
 
 ![](img/rstudiogit/rstudiogit2.png)
 
@@ -946,6 +1185,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 3
 
+*************
+
 ![](img/rstudiogit/rstudiogit3.png)
 
 *************
@@ -956,6 +1197,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 4
+
+*************
 
 ![](img/rstudiogit/rstudiogit4.png)
 
@@ -968,6 +1211,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 5
 
+*************
+
 ![](img/rstudiogit/rstudiogit5.png)
 
 *************
@@ -978,6 +1223,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 6
+
+*************
 
 ![](img/rstudiogit/rstudiogit6.png)
 
@@ -990,6 +1237,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 7
 
+*************
+
 ![](img/rstudiogit/rstudiogit7.png)
 
 *************
@@ -1000,6 +1249,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 8
+
+*************
 
 ![](img/rstudiogit/rstudiogit8.png)
 
@@ -1012,6 +1263,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 9
 
+*************
+
 ![](img/rstudiogit/rstudiogit9.png)
 
 *************
@@ -1023,6 +1276,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 10
 
+*************
+
 ![](img/rstudiogit/rstudiogit10.png)
 
 *************
@@ -1033,6 +1288,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 11
+
+*************
 
 ![](img/rstudiogit/rstudiogit11.png)
 
@@ -1048,6 +1305,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 1
 
+*************
+
 ![](img/rmarkdown/rmarkdown1.png)
 
 *************
@@ -1058,6 +1317,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 2
+
+*************
 
 ![](img/rmarkdown/rmarkdown2.png)
 
@@ -1070,6 +1331,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 3
 
+*************
+
 ![](img/rmarkdown/rmarkdown3.png)
 
 *************
@@ -1080,6 +1343,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 4
+
+*************
 
 ![](img/rmarkdown/rmarkdown4.png)
 
@@ -1092,6 +1357,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 5
 
+*************
+
 ![](img/rmarkdown/rmarkdown5.png)
 
 *************
@@ -1102,6 +1369,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 6
+
+*************
 
 ![](img/rmarkdown/rmarkdown6.png)
 
@@ -1114,6 +1383,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 7
 
+*************
+
 ![](img/rmarkdown/rmarkdown7.png)
 
 *************
@@ -1124,6 +1395,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 8
+
+*************
 
 ![](img/rmarkdown/rmarkdown8.png)
 
@@ -1136,6 +1409,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 9
 
+*************
+
 ![](img/rmarkdown/rmarkdown9.png)
 
 *************
@@ -1146,6 +1421,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 10
+
+*************
 
 ![](img/rmarkdown/rmarkdown10.png)
 
@@ -1158,6 +1435,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 11
 
+*************
+
 ![](img/rmarkdown/rmarkdown11.png)
 
 *************
@@ -1168,6 +1447,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 12
+
+*************
 
 ![](img/rmarkdown/rmarkdown12.png)
 
@@ -1180,6 +1461,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 13
 
+*************
+
 ![](img/rmarkdown/rmarkdown13.png)
 
 *************
@@ -1191,6 +1474,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 14
 
+*************
+
 ![](img/rmarkdown/rmarkdown14.png)
 
 *************
@@ -1200,6 +1485,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 *************
 
 ## Step 15
+
+*************
 
 ![](img/rmarkdown/rmarkdown15.png)
 
@@ -1211,6 +1498,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 16
 
+*************
+
 ![](img/rmarkdown/rmarkdown16.png)
 
 *************
@@ -1220,6 +1509,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 *************
 
 ## Step 17
+
+*************
 
 ![](img/rmarkdown/rmarkdown17.png)
 
@@ -1231,6 +1522,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 # Chapter 8: Create an online CV {.tabset}
+
+*************
 
 ## Step 1
 
@@ -1245,6 +1538,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 2
 
+*************
+
 ![](img/cv/cv2.png)
 
 *************
@@ -1255,6 +1550,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 3
+
+*************
 
 ![](img/cv/cv3.png)
 
@@ -1267,6 +1564,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 4
 
+*************
+
 ![](img/cv/cv4.png)
 
 *************
@@ -1277,6 +1576,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 5
+
+*************
 
 ![](img/cv/cv5.png)
 
@@ -1289,6 +1590,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 6
 
+*************
+
 ![](img/cv/cv6.png)
 
 *************
@@ -1299,6 +1602,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 7
+
+*************
 
 ![](img/cv/cv7.png)
 
@@ -1311,6 +1616,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 8
 
+*************
+
 ![](img/cv/cv8.png)
 
 *************
@@ -1322,6 +1629,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 ## Step 9
 
+*************
+
 ![](img/cv/cv9.png)
 
 *************
@@ -1332,6 +1641,8 @@ You should see one entry in the `SSH keys` panel. Well done. You are now ready t
 
 
 ## Step 10
+
+*************
 
 ![](img/cv/cv10.png)
 
