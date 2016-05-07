@@ -75,7 +75,6 @@ and github for data science oriented people including:
 
 - [Stat 545 at UBC by Jenny Bryan](http://stat545.com/git00_index.html)
 - [Advanced R by Hadley Wickham](http://r-pkgs.had.co.nz/git.html)
-- [Using branches by Atlassian](https://www.atlassian.com/git/tutorials/using-branches/)
 
 
 *************
@@ -847,7 +846,7 @@ You should now see your local changes _pushed_ to your online repository.
 
 ## Step 14
 
-Let's make a change to the `pca.R` script. Instead of a bar plot, we want
+Let's make a change to the `pca.R` script. Instead of a scree plot, we want
 a bar plot of the variance explained for each component:
 
 ```{r, eval=FALSE}
