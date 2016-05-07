@@ -497,7 +497,7 @@ You should now be at this screen.
 
 ## Step 9
 
-Click on the plus button in the top left corner. Your username should appear 
+Click on the <img src="img/rcode/rcode0.png" alt="Drawing" style="width: 50px;"/> button in the top left corner. Your username should appear 
 with a list of your repositories that are currently saved in your online GitHub 
 account. To be able to have a local copy of this repository (by local I mean on 
 your computer hard drive) click on the `Clone` tab and then 
@@ -568,7 +568,7 @@ the same one you created during the `Hello World` exercise in Chapter 2.
 Before moving on to Chapter 4, verify that the GitHub Desktop has added an 
 SSH key for you. An SSH key is used to establish a secure connection between 
 your computer and the online GitHub server. On the far top right hand side of 
-your online GitHub account click on the icon and navigate to `Settings`. 
+your online GitHub account click on the <img src="img/desktop/desktop0.png" alt="Drawing" style="width: 50px;"/> icon and navigate to `Settings`. 
 
 *************
 
@@ -604,11 +604,11 @@ of Principal Component Analysis.
 
 ## Step 1
 
-Create a local (meaning on your computer) repository by clickling the plus 
+Create a local (meaning on your computer) repository by clickling the <img src="img/rcode/rcode0.png" alt="Drawing" style="width: 50px;"/> 
 button in the top left corner of GitHub Desktop, and select the `Create` tab. 
 Name the repository `pcaCars` and select where you want this repository stored 
 on your computer. Leave the `Git ignore` value at its default (we will ignore what
-this is for now). Click on `Create repository`.
+this is for now). Click on <img src="img/rcode/rcode0000.png" alt="Drawing" style="width: 125px;"/>.
 
 *************
 
@@ -644,8 +644,9 @@ This text file allows you to control what you want to version control within the
 ## Step 3
 
 We now want to publish this repository to the remote (i.e. github.com/username). 
-Simply click on the `Publish` button in the top right hand corner. Add a description
-and click on `Publish pcaCars`.
+Simply click on the <img src="img/rcode/rcode00.png" alt="Drawing" style="width: 75px;"/> 
+button in the top right hand corner. Add a description
+and click on <img src="img/rcode/rcode000.png" alt="Drawing" style="width: 125px;"/>.
 
 *************
 
@@ -760,7 +761,7 @@ to the file.
 ## Step 9
 
 On the bottom left hand side, enter a summary of the changes you have made to 
-the repository and an (optional) description. Then click on `Commit to master`. 
+the repository and an (optional) description. Then click on <img src="img/rcode/rcode00000.png" alt="Drawing" style="width: 125px;"/>. 
 This is essentially telling Git to record the changes you have made and store them
 in a branch. We will learn about branches in Chapter 5.
 
@@ -778,7 +779,8 @@ in a branch. We will learn about branches in Chapter 5.
 ## Step 10
 
 You should see the following screen. You should notice that in the rectangular 
-black box, underneath the `Sync` button in the top right hand corner of GitHub Desktop,
+black box, underneath the <img src="img/rcode/rcode000000.png" alt="Drawing" style="width: 75px;"/> 
+button in the top right hand corner of GitHub Desktop,
 a timeline. As you commit additional changes, this timeline will grow. Each circle represents
 a snapshot of the repository at the time of the commit. This is the power of version controlling with 
 Git. You can see what changes you have made, and even revert back to snapshot you want. 
@@ -814,7 +816,8 @@ changes to the `remote`.
 
 ## Step 12
 
-Go to GitHub Desktop and click on the `Sync` button in the top right hand corner.
+Go to GitHub Desktop and click on the <img src="img/rcode/rcode000000.png" alt="Drawing" style="width: 75px;"/> 
+button in the top right hand corner.
 
 *************
 
@@ -882,7 +885,7 @@ is what has been removed from the file, and in green is what was added.
 
 ## Step 16
 
-Describe the change you have made and click on `Commit to master`
+Describe the change you have made and click on <img src="img/rcode/rcode00000.png" alt="Drawing" style="width: 125px;"/>
 
 *************
 
@@ -896,8 +899,8 @@ Describe the change you have made and click on `Commit to master`
 
 ## Step 17
 
-_Push_ your local changes to the remote repository by clicking on the `Sync` button. 
-You can view the different commits you have made in GitHub Desktop by clicking on 
+_Push_ your local changes to the remote repository by clicking on the <img src="img/rcode/rcode000000.png" alt="Drawing" style="width: 75px;"/> 
+button. You can view the different commits you have made in GitHub Desktop by clicking on 
 the grey circles in the timeline located in the rectangular black box.
 
 *************
@@ -912,7 +915,7 @@ the grey circles in the timeline located in the rectangular black box.
 
 ## Step 18
 
-Go to your GitHub account online to see that the changes have been updated. 
+Go to your GitHub account online to see that the changes have been updated. Click on the `History` button located in <img src="img/rcode/rcode0000000.png" alt="Drawing" style="width: 150px;"/> to see a list of commits you have made to the repository. 
 
 *************
 
@@ -926,8 +929,7 @@ Go to your GitHub account online to see that the changes have been updated.
 
 ## Step 19
 
-Click on the `History` button to see a list of commits you have made to the 
-repository.
+The `History` of commits you have made to the repository.
 
 *************
 
@@ -972,7 +974,7 @@ them as a way to request a brand new working directory^[[https://www.atlassian.c
 Click on the branch symbol <img src="img/branch/branch00.png" alt="Drawing" style="width: 25px;"/> and 
 name the branch `clustering`. The `From branch` entry indicates what the starting point of the `clustering` 
 branch should be (you will see what this means shortly). Since there are no other branches
-present, `master` is chosen by default. Click on `Create new branch`.
+present, `master` is chosen by default. Click on <img src="img/branch/branch000.png" alt="Drawing" style="width: 150px;"/>.
 
 *************
 
@@ -1074,7 +1076,7 @@ ggplot(carsDf,aes(x=Comp.1, y=Comp.2)) +
 
 Go to GitHub Desktop, click on the `pca.R` file and you will see the changes made
 have been highlighted. Describe the changes you have made and then click on 
-`Commit to clustering`. 
+<img src="img/branch/branch0000.png" alt="Drawing" style="width: 150px;"/>. 
 
 *************
 
@@ -1090,7 +1092,7 @@ have been highlighted. Describe the changes you have made and then click on
 ## Step 6
 
 _Push_ your local change to your online GitHub repository (i.e. the _remote_) 
-by clicking on the `Publish` button. 
+by clicking on the <img src="img/cv/cv_publish.png" alt="Drawing" style="width: 100px;"/> button. 
 
 *************
 
@@ -1161,8 +1163,8 @@ _Note: `pull requests` are a GitHub functionality and is not part of Git._
 
 ************
 
-Click on the `Pull request` button in GitHub Desktop, enter a summary and description
-of the proposed changes and why you did them. Then click on `Send pull request`. 
+Click on the <img src="img/branch/branch00000.png" alt="Drawing" style="width: 150px;"/> button in GitHub Desktop, enter a summary and description
+of the proposed changes and why you did them. Then click on <img src="img/branch/branch000000.png" alt="Drawing" style="width: 150px;"/>. 
 
 *************
 
@@ -1178,7 +1180,7 @@ of the proposed changes and why you did them. Then click on `Send pull request`.
 ## Step 11
 
 Click on `View it on GitHub`. This will open the submitted `pull request` in the 
-`pcaCars` repositor of your online GitHub account.
+`pcaCars` repository of your online GitHub account.
 
 *************
 
@@ -1195,7 +1197,7 @@ Click on `View it on GitHub`. This will open the submitted `pull request` in the
 
 GitHub will automatically check that the merge can be completed without any 
 conflicts. If there are no conflicts you will see the following screen. Click on 
-`Merge pull request`. 
+<img src="img/branch/branch0000000.png" alt="Drawing" style="width: 150px;"/>. 
 
 *************
 
@@ -1210,7 +1212,7 @@ conflicts. If there are no conflicts you will see the following screen. Click on
 
 ## Step 13
 
-Enter a comment about the pull request (optional) and click on `Confirm merge`.
+Enter a comment about the pull request (optional) and click on <img src="img/branch/branch00000000.png" alt="Drawing" style="width: 150px;"/>.
 
 *************
 
@@ -1227,7 +1229,7 @@ Enter a comment about the pull request (optional) and click on `Confirm merge`.
 
 Well done. You have successfully created a _branch_, submitted a _pull request_ and 
 _merged_ your changes from the `clustering` branch to the `master` branch. You can 
-delete the `clustering` branch as it is no longer needed because these changes
+delete the `clustering` branch by clicking on <img src="img/branch/branch_delete.png" alt="Drawing" style="width: 120px;"/> as it is no longer needed because these changes
 are now in the `master` branch. 
 
 *************
@@ -1259,7 +1261,7 @@ also notice that the clustering code has been merged with the PCA code.
 
 The _merge_ was done online. We now want to see these changes reflected on our
 computer (i.e. _locally_). To do this, go to GitHub Desktop and click on 
-the `Sync` button.  
+the <img src="img/rcode/rcode000000.png" alt="Drawing" style="width: 75px;"/> button.  
 
 *************
 
@@ -1348,7 +1350,7 @@ contains the `pcaCars` repository.
 
 ## Step 3
 
-Notice the `Git` tab next to the `History` tab in the top right panel. It is empty
+Notice the `Git` tab in <img src="img/rstudiogit/rstudiogit0.png" alt="Drawing" style="width: 150px;"/> located in the top right panel. It is empty
 because no changes have been made to the repositor.
 
 *************
@@ -1427,7 +1429,7 @@ You will also notice these changes in GitHub Desktop.
 
 ## Step 8
 
-Describe the commit and click on `Commit to master`. 
+Describe the commit and click on <img src="img/rcode/rcode00000.png" alt="Drawing" style="width: 150px;"/>. 
 
 *************
 
@@ -1442,7 +1444,7 @@ Describe the commit and click on `Commit to master`.
 
 ## Step 9
 
-`Sync` the _local_ repository with the _remote_.
+`Sync` the _local_ repository with the _remote_ by clicking on the <img src="img/rcode/rcode000000.png" alt="Drawing" style="width: 75px;"/> button. 
 
 *************
 
@@ -1459,7 +1461,7 @@ Describe the commit and click on `Commit to master`.
 
 RStudio can also handle _branches_. To see this, click on the branch symbol 
 <img src="img/branch/branch00.png" alt="Drawing" style="width: 25px;"/>, and create
-a branch called `gh-pages`
+a branch called `gh-pages`. To do this, enter `gh-pages` in the Name field and click on <img src="img/branch/branch000.png" alt="Drawing" style="width: 125px;"/>
 
 *************
 
@@ -1563,7 +1565,7 @@ Click on `OK`.
 ## Step 5
 
 To ensure everything is working correctly compile the document by clicking on 
-the <img src="img/rmarkdown/rmarkdown00.png" alt="Drawing" style="width: 70px;"/> button. 
+the <img src="img/rmarkdown/rmarkdown00.png" alt="Drawing" style="width: 100px;"/> button. 
 This will convert the `R Markdown` document to HTML. 
 
 
@@ -1679,7 +1681,7 @@ branch.
 ## Step 12
 
 In GitHub Desktop, select all the files that have been changed or added, describe the changes
-and `Commit to gh-pages`. 
+and click on <img src="img/rmarkdown/rmarkdown_ghpages.png" alt="Drawing" style="width: 145px;"/> 
 
 *************
 
@@ -1695,7 +1697,7 @@ and `Commit to gh-pages`.
 ## Step 13
 
 `Publish` the local changes to your online GitHub repository by clicking the 
-`Publish` button in GitHub Desktop. 
+<img src="img/cv/cv_publish.png" alt="Drawing" style="width: 100px;"/> button in GitHub Desktop. 
 
 *************
 
@@ -1796,7 +1798,7 @@ on Academic CVs for Statistical Science Faculty Positions.
 ## Step 1
 
 In GitHub Desktop, create a new repository called `cv`. Click on 
-`Create Repository`.
+<img src="img/rcode/rcode0000.png" alt="Drawing" style="width: 145px;"/> 
 
 ![](img/cv/cv1.png)
 
@@ -1809,7 +1811,7 @@ In GitHub Desktop, create a new repository called `cv`. Click on
 
 ## Step 2
 
-Create a `gh-pages` branch and click on `Create new branch`. 
+Create a `gh-pages` branch and click on <img src="img/branch/branch000.png" alt="Drawing" style="width: 145px;"/>
 
 *************
 
@@ -1842,7 +1844,7 @@ the <img src="img/rmarkdown/rmarkdown00.png" alt="Drawing" style="width: 70px;"/
 
 ## Step 4
 
-Commit the changes in GitHub Desktop. Click on `Commit to gh-pages`. 
+Commit the changes in GitHub Desktop. Describe the changes you made and click on <img src="img/rmarkdown/rmarkdown_ghpages.png" alt="Drawing" style="width: 145px;"/>. 
 
 
 *************
@@ -1858,7 +1860,7 @@ Commit the changes in GitHub Desktop. Click on `Commit to gh-pages`.
 
 ## Step 5
 
-Click on `Publish` to _push_ your changes to your online GitHub account. 
+Click on <img src="img/cv/cv_publish.png" alt="Drawing" style="width: 100px;"/> to _push_ your changes to your online GitHub account. 
 
 *************
 
@@ -1873,7 +1875,7 @@ Click on `Publish` to _push_ your changes to your online GitHub account.
 
 ## Step 6
 
-After entering a description of the repository click on `Publish cv`.
+After entering a description of the repository click on <img src="img/cv/cv_publishcv.png" alt="Drawing" style="width: 145px;"/>.
 
 *************
 
