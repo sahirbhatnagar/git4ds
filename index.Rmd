@@ -65,33 +65,58 @@ It covers a variety of topics that could each be its own book. There are a pleth
 online resources available for everything covered here but you can't Google something
 if you don't know what you're looking for in the first place. 
 
-*************
-*************
 
 ## Related Work
 
-There are several comprehensive online resources available for learning git 
-and github for data science oriented people including:
+There are several more advanced and comprehensive online resources available for 
+learning git and github for data science oriented people including:
 
 - [Stat 545 at UBC by Jenny Bryan](http://stat545.com/git00_index.html)
 - [Advanced R by Hadley Wickham](http://r-pkgs.had.co.nz/git.html)
 
+The main difference here is that we don't use the terminal (or command line) and
+provide screenshots for every step. 
 
 *************
 *************
 *************
 
-# Chapter 1: Installing Git {.tabset}
+# Chapter 1: Installing Git {.tabset .tabset-fade .tabset-pills}
+
+*************
+
+## Introduction
+
+Git is to GitHub, what R is to RStudio. In other words Git is the software that 
+does all the work behind the scenes, and GitHub a user interface that makes its 
+easier to communicate with Git (and adds functionality as well). In this chapter 
+we will download and install Git. 
 
 _Note: the screenshots provided here are from a Windows operating system, however it will be similar on a Mac or Linux._
 
 *************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+
 
 ## Step 1
 
-Git is to GitHub, what R is to RStudio. In other words Git is the software that 
-does all the work behind the scenes, and GitHub a user interface that makes its 
-easier to communicate with Git (and adds functionality as well). 
+
 [Download Git](https://git-scm.com/downloads)
 
 *************
@@ -271,7 +296,11 @@ to Chapter 2 to signup for a GitHub account.
 *************
 
 
-# Chapter 2: Signup for a GitHub account and `hello world` tutorial {.tabset}
+# Chapter 2: Signup for a GitHub account and `hello world` tutorial {.tabset .tabset-fade .tabset-pills}
+
+*************
+
+## Introduction
 
 In this short Chapter, you will signup for a GitHub account. GitHub is like 
 your online portfolio of code. It has a plethora of great features for creating 
@@ -279,7 +308,26 @@ websites, project pages and collaborating with others. Again GitHub is an
 interface to the version control system called Git. Other options 
 include [Bitbucket](https://bitbucket.org/) and [GitLab](https://about.gitlab.com/).
 
+
 *************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+
 
 ## Step 1
 
@@ -356,7 +404,11 @@ Complete the exercises and move on to Chapter 3: Installing GitHub Desktop.
 *************
 *************
 
-# Chapter 3: Installing GitHub Desktop {.tabset}
+# Chapter 3: Installing GitHub Desktop {.tabset .tabset-fade .tabset-pills}
+
+*************
+
+## Introduction
 
 Traditionally, version control with Git is accessed through the command line or 
 terminal. GitHub Desktop is a software program that makes it easier to use Git 
@@ -364,8 +416,26 @@ functions without having to use the command line. It also allows you to
 communicate with your GitHub website (github.com/username). Don't worry if the 
 differences between Git, GitHub and GitHub Desktop are not clear to you yet. 
 You will have a better understanding once you have completed this tutorial. 
+
 _Note: in all the screenshots that follow, my username is shown, however you should be entering your username, password and email address created in Chapter 2._
 
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
 *************
 
 ## Step 1
@@ -596,10 +666,33 @@ to version control some `R` code in Chapter 4.
 *************
 
 
-# Chapter 4: Version control `R` code using an example of PCA {.tabset}
+# Chapter 4: Version control `R` code using an example of PCA {.tabset .tabset-fade .tabset-pills}
+
+*************
+
+## Introduction
 
 In this chapter we will learn how to version control `R` code using an example 
 of Principal Component Analysis.
+
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
 
 ## Step 1
 
@@ -941,7 +1034,11 @@ The `History` of commits you have made to the repository.
 *************
 
 
-# Chapter 5: Create a branch, pull request, merge {.tabset}
+# Chapter 5: Create a branch, pull request, merge {.tabset .tabset-fade .tabset-pills}
+
+*************
+
+## Introduction 
 
 In this chapter you will learn what the words `branch`, `pull request` and `merge` mean
 in the GitHub world. _Branching_ is a much more efficient and safe alternative to 
@@ -951,7 +1048,7 @@ having files in a project like this:
 - pcaCars_v2_hierarchical_clustering_Sept_2015.R
 - pcaCars_v3_bayesian_clustering_not_working.R
 
-This image^[[https://confluence.atlassian.com/bitbucket/use-a-git-branch-to-merge-a-file-681902555.html](https://confluence.atlassian.com/bitbucket/use-a-git-branch-to-merge-a-file-681902555.html)] nicely summarised what _branching_ is useful for:
+This image^[[https://confluence.atlassian.com/bitbucket/use-a-git-branch-to-merge-a-file-681902555.html](https://confluence.atlassian.com/bitbucket/use-a-git-branch-to-merge-a-file-681902555.html)] nicely summarises what _branching_ is useful for:
 
 *************
 
@@ -965,7 +1062,8 @@ modify your working script, then creating a branch is what you should do.
 > A branch represents an independent line of development. You can think of 
 them as a way to request a brand new working directory^[[https://www.atlassian.com/git/tutorials/using-branches](https://www.atlassian.com/git/tutorials/using-branches)].
 
-
+*************
+*************
 *************
 
 ## Step 1
@@ -1306,7 +1404,11 @@ rectangular box.
 
 
 
-# Chapter 6: Brief Intro to Rstudio Git functionality {.tabset}
+# Chapter 6: Brief Intro to Rstudio Git functionality {.tabset .tabset-fade .tabset-pills}
+
+*************
+
+## Introduction
 
 RStudio also has the ability to interact with Git and GitHub, similar to 
 GitHub Desktop. I will briefly show how to initiate this by creating an 
@@ -1314,6 +1416,23 @@ GitHub Desktop. I will briefly show how to initiate this by creating an
 [here](http://www.datasurg.net/2015/07/13/rstudio-and-github/) and
 [here](http://r-pkgs.had.co.nz/git.html).
 
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
 *************
 
 ## Step 1
@@ -1491,11 +1610,34 @@ _Note: this branch must be called `gh-pages`; you will find out why in the next 
 
 
 
-# Chapter 7: Create and publish an RMarkdown document {.tabset}
+# Chapter 7: Create and publish an RMarkdown document {.tabset .tabset-fade .tabset-pills}
+
+*************
+
+## Introduction
 
 In this chapter you will learn how to create an HTML report (of the PCA you did in 
 earlier chapters) using [`RMarkdown`](http://rmarkdown.rstudio.com/). You will 
 then learn how to publish this report online. **The following steps must be completed on the `gh-pages` branch**
+
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
 
 ## Step 1
 
@@ -1785,13 +1927,34 @@ See [https://pages.github.com/](https://pages.github.com/) for more details.
 *************
 
 
-# Chapter 8: Create an online CV {.tabset}
+# Chapter 8: Create an online CV {.tabset .tabset-fade .tabset-pills}
+
+*************
+
+## Introduction
 
 In this chapter you will learn how to create an online CV. The template I have 
 shown is for illustration purposes. The main objective here is for you to have a website 
 that has your CV. I highly recommend the advice given by [Sherri Rose](http://drsherrirose.com/academic-cvs-for-statistical-science-faculty-positions)
 on Academic CVs for Statistical Science Faculty Positions. 
 
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
+*************
 *************
 
 ## Step 1
